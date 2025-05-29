@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Custom Morse Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Universal Morse Code Communicator</h1>
+</header>
+
+<div class="container">
+    <div class="translator-box" id="textToMorseSection">
+        <h2>Text to Morse</h2>
+        <label for="userText">Enter Text:</label>
+        <textarea id="userText" rows="4" placeholder="Type your message here..."></textarea>
+
+        <div class="controls">
+            <button id="convertText">Convert to Morse</button>
+            <button id="clearText">Clear Text</button>
+        </div>
+
+        <div class="output-area">
+            <label for="outputArea">Morse Code Output:</label>
+            <div class="result" id="outputArea"></div>
+        </div>
+
+        <div class="audio-panel">
+            <label for="rateControl">Playback Speed:</label>
+            <input type="range" id="rateControl" min="0.5" max="2.5" value="1" step="0.1">
+            <span id="rateDisplay">1.0x</span>
+            <button id="audioPlay" disabled>Play Morse</button>
+            <button id="stopAudio" disabled>Stop Playback</button>
+        </div>
+    </div>
+
+    <div class="translator-box" id="morseToTextSection">
+        <h2>Morse to Text</h2>
+        <label for="morseInput">Enter Morse Code:</label>
+        <textarea id="morseInput" rows="4" placeholder="Enter Morse code (e.g., ... --- ...)"></textarea>
+
+        <div class="controls">
+            <button id="convertMorseToText">Translate to Text</button>
+            <button id="clearMorseInput">Clear Morse</button>
+        </div>
+
+        <div class="output-area">
+            <label for="textOutput">Translated Text Output:</label>
+            <div class="result" id="textOutput"></div>
+        </div>
+    </div>
+</div>
+
+<div class="legend-footer">
+    <h3>Morse Code Legend:</h3>
+    <span>&bull;</span> = Dot &nbsp;&nbsp;&nbsp;&nbsp; <span>&ndash;</span> = Dash &nbsp;&nbsp;&nbsp;&nbsp; (Space for character, / for word separation)
+</div>
+
+<footer>
+    <p>&copy; 2025 Amanuel Gebrie /Morse Translator - </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
